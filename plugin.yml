@@ -1,0 +1,22 @@
+name: "AlankiraPlugin"
+main: "AlankiraPlugin\\Main"
+version: 1.0.0
+api: 5.0.0
+author: Sec9097 
+description: "AlanKira oluşturma, kiralama ve yönetim eklentisi."
+commands:
+  alankira:
+    description: "AlanKira menüsünü açar."
+    usage: "/alankira"
+    permission: "alankiralekenti.command.alankira"
+    permission-message: "Bu komutu kullanmak için gerekli izne sahip değilsiniz."
+permissions:
+  alankiralekenti.command.alankira:
+    description: "AlanKira menüsünü açma izni."
+    default: true
+  alankiralekenti.admin:
+    description: "AlanKira admin işlemleri menüsünü kullanma izni."
+    default: op
+depend:
+  - EconomyAPI
+  - FormAPI
