@@ -17,6 +17,3 @@ permissions:
   alankiralekenti.admin:
     description: "AlanKira admin işlemleri menüsünü kullanma izni."
     default: op
-depend:
-  - EconomyAPI
-  - FormAPI
