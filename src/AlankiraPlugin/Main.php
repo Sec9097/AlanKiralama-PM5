@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AlankiraPlugin;
 
 use pocketmine\plugin\PluginBase;
@@ -12,8 +14,8 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
-use pocketmine\block\BlockFactory;
 use pocketmine\block\BlockIds;
+use pocketmine\block\VanillaBlocks;
 use jojoe77777\FormAPI\SimpleForm;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\event\EventPriority;
@@ -488,7 +490,7 @@ class Main extends PluginBase implements Listener {
             for ($x = $minX; $x <= $maxX; $x++) {
                 for ($y = $minY; $y <= $maxY; $y++) {
                     for ($z = $minZ; $z <= $maxZ; $z++) {
-                        $world->setBlock(new Vector3($x, $y, $z), BlockFactory::get(BlockIds::AIR));
+                        $world->setBlock(new Vector3($x, $y, $z), VanillaBlocks::AIR());
                     }
                 }
             }
@@ -573,7 +575,7 @@ class Main extends PluginBase implements Listener {
         for ($x = $minX; $x <= $maxX; $x++) {
             for ($y = $minY; $y <= $maxY; $y++) {
                 for ($z = $minZ; $z <= $maxZ; $z++) {
-                    $world->setBlock(new Vector3($x, $y, $z), BlockFactory::get(BlockIds::AIR));
+                    $world->setBlock(new Vector3($x, $y, $z), VanillaBlocks::AIR());
                 }
             }
         }
