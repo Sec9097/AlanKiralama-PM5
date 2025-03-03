@@ -1,6 +1,6 @@
 name: "AlankiraPlugin"
 main: "AlankiraPlugin\\Main"
-version: 1.0.0
+version: 1.0.1
 api: 5.0.0
 author: Sec9097 
 description: "AlanKira oluşturma, kiralama ve yönetim eklentisi."
